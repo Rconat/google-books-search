@@ -9,12 +9,14 @@ import Saved from './pages/saved'
 import Search from './pages/search'
 
 // importing components
+import Header from './components/header'
 import Nav from './components/nav'
 
 function App() {
   return (
     <Router>
       <Nav />
+      <Header />
       <Switch>
         <Route path="/saved">
           <Saved />

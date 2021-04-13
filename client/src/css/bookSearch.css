@@ -1,0 +1,19 @@
+.book-search {
+    border-style: solid;
+    border-bottom-width: medium;
+    border-bottom-color: rgb(87, 87, 87);
+    margin-bottom: 25px;
+    padding-bottom: 75px;
+}
+
+.search-btn {
+    font-size: 120%;
+    float: right;
+    margin: 20px;
+}
+
+.search-form {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
