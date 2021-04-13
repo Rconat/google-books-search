@@ -1,7 +1,12 @@
 import React from 'react'
 
+// importing components
+import SavedBooks from '../components/savedBooks'
+
 const Saved = () => (
-    <div>Saved</div>
+    <>
+        <SavedBooks />
+    </>
 )
 
 export default Saved
