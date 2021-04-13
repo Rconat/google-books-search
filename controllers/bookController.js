@@ -5,7 +5,7 @@ module.exports = {
 
     },
 
-    creatBooks: function(req, res) {
+    createBooks: function(req, res) {
 
     },
 
@@ -16,6 +16,4 @@ module.exports = {
     deleteBook: function(req, res) {
 
     }
-
-
 }
