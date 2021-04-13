@@ -4,3 +4,25 @@
     border-bottom-width: medium;
     border-bottom-color: rgb(87, 87, 87);
 }
+
+button {
+    font-size: 120%;
+    float: right;
+    margin: 20px;
+}
+
+.data {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.saved-books-results {
+    margin-top: 30px;
+    border-style: solid;
+    border-bottom-width: medium;
+    border-bottom-color: rgb(87, 87, 87);
+}
+
+h2 {
+    padding-top: 10px;
+}

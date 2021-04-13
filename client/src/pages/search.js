@@ -4,11 +4,16 @@ import React from 'react'
 import BookSearch from '../components/bookSearch'
 import Results from '../components/results'
 
-const Search = () => (
-    <>
-        <BookSearch />
-        <Results />
-    </>
-)
+const Search = () => {
+    
+
+
+    return(
+        <>
+            <BookSearch />
+            <Results />
+        </>
+    )
+}
 
 export default Search
