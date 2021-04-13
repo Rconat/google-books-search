@@ -4,3 +4,7 @@
     border-bottom-width: medium;
     border-bottom-color: rgb(87, 87, 87);
 }
+
+.book-description {
+    margin-right: 80px;
+}
