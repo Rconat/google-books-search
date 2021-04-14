@@ -20,7 +20,14 @@ const Results = ({ results, handleSave }) => {
                             className="save-btn"
                             onClick= {()=> { handleSave(response.id) }}
                             >Save</button>
-                            <button className="view-btn">View</button>
+                            <button 
+                            className="view-btn">
+                            <a 
+                                href={response.volumeInfo.infoLink} 
+                                target="_blank"
+                                rel="noreferrer"
+                            >View </a>
+                            </button>
                         </div>
                     </div>
                     <hr />
