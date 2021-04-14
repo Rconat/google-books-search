@@ -11,7 +11,6 @@ const Search = () => {
     const [searchBook, setSearchBook] = useState("The Expanse")
     const [results, setResults] = useState([])
 
-
     useEffect(() => {
         fetchBookData()
     }, [])
@@ -35,6 +34,7 @@ const Search = () => {
 
     const handleSave = id => {
         const findBook = results.find(response => {
+            // console.log(response.id)
             return response.id === id
         })
     
@@ -45,7 +45,8 @@ const Search = () => {
             image: findBook.volumeInfo.imageLinks.thumbnail,
             link: findBook.volumeInfo.infoLink,
         }
-
+        console.log(findBook)
+        console.log(bookData)
         API.saveBook(bookData)
     }
 

@@ -3,29 +3,44 @@ import React from 'react'
 // importing styles
 import '../css/savedBooks.css'
 
-const SavedBooks = () => {
+const SavedBooks = ({ savedBooks, handleDelete }) => {
     return(
-        <div className="saved-books-results container">
-            <div className="row">
-                <div className="col-md-9">
-                    <h3 className="book-title">Book Title</h3>
-                    <h4 className="author">Author</h4>
+        savedBooks.map(response =>
+            (
+                <div className="saved-books-results container" key={response.id}>
+                    <div className="row">
+                        <div className="col-md-9">
+                            <h3 className="book-title">{response.title}</h3>
+                            <h4 className="author">{response.author}</h4>
+                        </div>
+                        <div className="col-md-3">
+                            <button 
+                                className="delete-btn"
+                                onClick={() => { handleDelete(response.id) }}
+                            >Delete</button>
+                            <button className="view-btn">
+                                <a 
+                                    href={response.link} 
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >View </a>
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="row data">
+                        <div className="col-md-3">
+                            <img 
+                                src={response.image} 
+                                alt={response.title}/>
+                        </div>
+                        <div className="col-md-9">
+                            <p className="book-description">{response.description}</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-md-3">
-                    <button className="delete-btn">Delete</button>
-                    <button className="view-btn">View</button>
-                </div>
-            </div>
-            <hr />
-            <div className="row data">
-                <div className="col-md-3">
-                    <img src="https://via.placeholder.com/150" alt="placeholder"/>
-                </div>
-                <div className="col-md-9">
-                    <p className="book-description">Book Description</p>
-                </div>
-            </div>
-        </div>
+            )
+        )
     )
 }
 

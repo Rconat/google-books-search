@@ -7,7 +7,7 @@ const API = {
     },
     // Saves a book to the database
     saveBook : function (data){
-        return axios.get("/api/books", data)
+        return axios.post("/api/books", data)
     },
     // Deletes the book with the given id
     deleteBook : function (data, id){
