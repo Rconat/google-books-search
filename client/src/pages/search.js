@@ -34,18 +34,20 @@ const Search = () => {
 
     const handleSave = id => {
         const findBook = results.find(response => {
-            // console.log(response.id)
             return response.id === id
         })
     
         const bookData = {
             title: findBook.volumeInfo.title,
-            authors: findBook.volumeInfo.authors,
+            authors: findBook.volumeInfo.authors[0],
             description: findBook.volumeInfo.description,
             image: findBook.volumeInfo.imageLinks.thumbnail,
             link: findBook.volumeInfo.infoLink,
+            book_id: id
         }
-        console.log(findBook)
+
+        console.log(id)
+        console.log(findBook.volumeInfo.authors[0])
         console.log(bookData)
         API.saveBook(bookData)
     }

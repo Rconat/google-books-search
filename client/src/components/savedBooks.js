@@ -11,7 +11,7 @@ const SavedBooks = ({ savedBooks, handleDelete }) => {
                     <div className="row">
                         <div className="col-md-9">
                             <h3 className="book-title">{response.title}</h3>
-                            <h4 className="author">{response.author}</h4>
+                            <h4 className="author">{response.authors}</h4>
                         </div>
                         <div className="col-md-3">
                             <button 
