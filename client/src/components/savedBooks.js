@@ -5,9 +5,10 @@ import '../css/savedBooks.css'
 
 const SavedBooks = ({ savedBooks, handleDelete }) => {
     return(
-        savedBooks.map(response =>
-            (
-                <div className="saved-books-results container" key={response.id}>
+        savedBooks.map(response => {
+                console.log(response)
+            return(
+                <div className="saved-books-results container" key={response._id}>
                     <div className="row">
                         <div className="col-md-9">
                             <h3 className="book-title">{response.title}</h3>
@@ -16,7 +17,7 @@ const SavedBooks = ({ savedBooks, handleDelete }) => {
                         <div className="col-md-3">
                             <button 
                                 className="delete-btn"
-                                onClick={() => { handleDelete(response.id) }}
+                                onClick={() => { handleDelete(response._id) }}
                             >Delete</button>
                             <button className="view-btn">
                                 <a 
@@ -40,6 +41,7 @@ const SavedBooks = ({ savedBooks, handleDelete }) => {
                     </div>
                 </div>
             )
+            }
         )
     )
 }

@@ -28,8 +28,9 @@ const Saved = () => {
         const findBook = savedBooks.find(book => {
             return book._id === id
         })
-
-        API.deleteBook(findBook, id)
+        console.log("nick", id)
+        console.log("Ryan", findBook)
+        API.deleteBook(id)
             .then(response => {
                 getSavedBooks()
             })

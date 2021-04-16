@@ -10,8 +10,8 @@ const API = {
         return axios.post("/api/books", data)
     },
     // Deletes the book with the given id
-    deleteBook : function (data, id){
-        return axios.delete("/api/books" + id, data)
+    deleteBook : function (id){
+        return axios.delete("/api/books/" + id)
     }
 }
 
